@@ -1,0 +1,27 @@
+main{
+    width: 100vw;
+  
+    
+}
+main ul li{
+    list-style: none;
+}
+header{
+    width: 100vw;
+    height: 30vh;
+    background-image: url("img/img3.jpg");
+   
+    background-size: cover;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    width: 100vw;
+    height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    background-color: aqua;
+}
