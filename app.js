@@ -13,6 +13,7 @@ const listTrees = () => {
     })
     displayResult.innerHTML = `${treeList}  = ${trees.length} elements long`
 }
+
 listTrees()
 
 
