@@ -13,7 +13,7 @@ const listTrees = () => {
     })
     displayResult.innerHTML = `${treeList}  = ${trees.length} elements long`
 }
-
+ 
 listTrees()
 
 
@@ -26,9 +26,16 @@ document.querySelector(".add_pear").onclick = () => {
     listTrees()
 }
 document.querySelector(".lowCase").onclick = () => {
-    trees.toLowerCase()
 
+ if(trees.length > 0) {
+     var text = trees
+   text.toLowerCase()
+ 
     listTrees()
+} else {
+    errorMess.textContent = "error"
+}
+   
 }
 document.querySelector(".remove_first").onclick = () => {
     if(trees.length > 0) {
