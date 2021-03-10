@@ -1,5 +1,5 @@
 
-const trees = ["Elm", "Oak", "Maple", "pine"]
+const trees = ["Elm", "Oak", "Maple", "Pine"]
 const errorMess = document.querySelector(".error")
 const displayResult = document.querySelector(".displayResults")
 const tree3 = document.querySelector(".tree3")
@@ -25,18 +25,24 @@ document.querySelector(".add_pear").onclick = () => {
     trees.unshift("Pear")
     listTrees()
 }
-document.querySelector(".lowCase").onclick = () => {
 
- if(trees.length > 0) {
-     var text = trees
-   text.toLowerCase()
- 
-    listTrees()
-} else {
-    errorMess.textContent = "error"
-}
-   
-}
+/*--------------------------------------------------------------------*/
+
+
+document.querySelector(".lowCase").onclick = () => {
+    if(trees.length > 0) {
+        trees.map(trees => {trees.toLowerCase();})
+        listTrees()
+       } else {
+          errorMess.textContent = "error"
+      }
+   }
+
+
+
+/*--------------------------------------------------------------------*/
+
+
 document.querySelector(".remove_first").onclick = () => {
     if(trees.length > 0) {
         trees.shift()
@@ -46,6 +52,8 @@ document.querySelector(".remove_first").onclick = () => {
     }
     
 }
+
+
 document.querySelector(".remove_last").onclick = () => {
     if(trees.length > 0) {
         trees.pop()
@@ -54,6 +62,8 @@ document.querySelector(".remove_last").onclick = () => {
         errorMess.textContent = "error"
     }
 }
+
+
 document.querySelector(".remove_second").onclick = () => {
     if(trees.length > 0) {
         pos = 1
