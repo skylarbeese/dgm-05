@@ -31,7 +31,9 @@ document.querySelector(".add_pear").onclick = () => {
 
 document.querySelector(".lowCase").onclick = () => {
     if(trees.length > 0) {
-        trees.map(trees => {trees.toLowerCase();})
+        trees.forEach(trees => {
+           return trees.toLowerCase();
+        })
         listTrees()
        } else {
           errorMess.textContent = "error"
@@ -73,15 +75,24 @@ document.querySelector(".remove_second").onclick = () => {
         errorMess.textContent = "error"
     }
 }
+
+
+/*-----------------------------------------------------------------*/
 document.querySelector(".sort").onclick = () => {
     if(trees.length > 0) {
-        trees.sort((a, b) => a - b)
+      trees.sort(function(a, b) {
+            return a === b ? 0 : a > b ? 1 : -1
+        })
+  
         
         listTrees()
     } else {
         errorMess.textContent = "error"
     }
 }
+/*-----------------------------------------------------------------*/
+
+
 document.querySelector(".showTree3").onclick = () => {
   
   //  var index = trees.indexOf(3);
