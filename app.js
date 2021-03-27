@@ -2,6 +2,7 @@
 const trees = ["Elm", "Oak", "Maple", "Pine"]
 const errorMess = document.querySelector(".error")
 const displayResult = document.querySelector(".displayResults")
+const displayResult1 = document.querySelector(".displayResults1")
 const tree3 = document.querySelector(".tree3")
 const tree4 = document.querySelector(".tree4")
 
@@ -30,20 +31,14 @@ document.querySelector(".add_pear").onclick = () => {
 
 
 document.querySelector(".lowCase").onclick = () => {
-
-        
-     
-        for (let i = 0; i < trees.length; i++) {
-          console.log(trees[i].toLowerCase());
-          trees[i].toLowerCase()
-        }
-       
-        listTrees()
+    treeLi = ''
+    trees.forEach(tree => {
+        treeLi += ` ${tree} `
+        console.log(tree)
+    })
+    displayResult.innerHTML = `${treeLi.toLowerCase()}  = ${trees.length} elements long`
       
-    
-       
-      
-   }
+}
 
 
 
