@@ -30,14 +30,19 @@ document.querySelector(".add_pear").onclick = () => {
 
 
 document.querySelector(".lowCase").onclick = () => {
-    if(trees.length > 0) {
-        trees.forEach(trees => {
-           return trees.toLowerCase();
-        })
+
+        
+     
+        for (let i = 0; i < trees.length; i++) {
+          console.log(trees[i].toLowerCase());
+          trees[i].toLowerCase()
+        }
+       
         listTrees()
-       } else {
-          errorMess.textContent = "error"
-      }
+      
+    
+       
+      
    }
 
 
